@@ -1,4 +1,4 @@
-# Kampüs Kulübü — Üç sayfalık statik site
+# Renkli Atölye — Altı sayfalık statik site
 
 BPR201 - İnternet Tabanlı Programlama
 Dr. Öğr. Üyesi Serkan AKSU
@@ -17,16 +17,21 @@ python3 -m http.server 8000 --bind 0.0.0.0
 ```
 
 6. Ports panelinde 8000 portunu bul. Gerekirse Forward a Port ile 8000 ekle. Open in Browser seç. Port Private kalabilir.
-7. Ana Sayfa, Etkinlikler ve Hakkımızda bağlantılarını dene.
+7. Ana Sayfa, Koleksiyon, Atölye, Takı, Mum ve Örgü & El İşi bağlantılarını dene.
 8. HTML/CSS değişikliğinden sonra dosyayı kaydet (Ctrl+S veya Mac'te Cmd+S), browser sayfasını yenile.
 
 Codespaces varsayılan ortamında Python bulunur. `python3 --version` ile kontrol et. Bu projede npm, framework, database veya uygulama kurulumu gerekmez. Python yalnızca hazır dosyaları sunar. Yerel bilgisayarda HTML dosyalarını çift tıklayarak da açabilirsin.
 
 ## Dosyalar
-- index.html: Ana Sayfa
-- etkinlikler.html: Üç örnek etkinlik
-- hakkimizda.html: Proje tanıtımı
-- style.css: Ortak renkler, sayfa düzeni ve mobil görünüm
+- index.html: Atölye tanıtımı ve öne çıkan ürünler
+- etkinlikler.html: Aranabilir el yapımı ürün koleksiyonu
+- hakkimizda.html: Atölyenin hikayesi ve değerleri
+- taki-yapimi.html: Takı atölyesi ve randevu seçenekleri
+- mum-yapimi.html: Mum atölyesi ve randevu seçenekleri
+- orgu-el-isi.html: Örgü ve el işi atölyesi randevuları
+- style.css: Ortak renk paleti, sayfa düzeni ve mobil görünüm
+- appointments.js: Atölye randevu seçimini sayfada gösterir
+- search.js: Koleksiyondaki ürünleri arama alanına göre filtreler
 
 ## Copilot alıştırması
 Önce dosyayı aç. Chat içinde şunu sor:
@@ -35,9 +40,9 @@ Codespaces varsayılan ortamında Python bulunur. `python3 --version` ile kontro
 
 Sonra şu küçük değişikliği iste:
 
-> Yalnızca etkinlikler.html dosyasına mevcut article yapısını kullanarak bir GitHub Atölyesi ekle. Tarihi 3 Aralık, saati 14.00 ve yeri Bilgisayar Laboratuvarı olsun. Yeni paket veya JavaScript ekleme. Değişen satırları açıkla.
+> Yalnızca etkinlikler.html dosyasına mevcut catalog-item yapısını kullanarak el yapımı bir ürün ekle. Ürün adı, türü ve kısa açıklaması olsun. Yeni paket veya çerçeve ekleme. Değişen satırları açıkla.
 
-Öneriyi oku. Dört etkinliğin göründüğünü ve diğer sayfaların açıldığını kontrol et. AI_NOTLARI.md dosyasına hangi yardımı aldığını ve nasıl test ettiğini yaz. Copilot erişimin yoksa bir article bloğunu kendin çoğalt.
+Öneriyi oku. Yeni ürünün koleksiyonda göründüğünü ve diğer sayfaların açıldığını kontrol et. AI_NOTLARI.md dosyasına hangi yardımı aldığını ve nasıl test ettiğini yaz. Copilot erişimin yoksa bir catalog-item bloğunu kendin çoğalt.
 
 ## Kaydet ve GitHub'a gönder
 Source Control bölümünde diff'i incele. İlgili dosyaları + ile stage et. Anlamlı mesajla Commit yap. Ardından Sync Changes veya Push seç. GitHub repository sayfasında yeni commit'i doğrula.
@@ -57,4 +62,4 @@ https://github.com/settings/education/benefits
 https://docs.github.com/en/codespaces/quickstart
 https://docs.github.com/en/codespaces/reference/using-github-copilot-in-github-codespaces
 
-Bu proje eğitim örneğidir. Tarihler ve etkinlikler kurgudur. Kullanıcı girişi, form gönderimi ve database içermez.
+Bu proje eğitim amaçlı statik bir site örneğidir. Ürün açıklamaları ve marka kurgusaldır; sipariş, ödeme veya stok sistemi içermez. Ürün fotoğrafları Unsplash, yazı tipleri Google Fonts üzerinden yüklenir; bu görsellerin ve yazı tiplerinin görüntülenmesi için internet bağlantısı gerekir.

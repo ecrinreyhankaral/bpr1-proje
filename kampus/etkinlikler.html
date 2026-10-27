@@ -3,20 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Etkinlikler | Kampüs Kulübü</title>
+  <meta name="theme-color" content="#fff8ed">
+  <title>Koleksiyon | Renkli Atölye</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header><div class="brand">Kampüs Kulübü</div><nav aria-label="Ana menü"><a href="index.html">Ana Sayfa</a>
-<a href="etkinlikler.html" aria-current="page">Etkinlikler</a>
-<a href="hakkimizda.html">Hakkımızda</a></nav></header>
-<main><p class="eyebrow">KAMPÜS KULÜBÜ</p><h1>Etkinlik takvimi</h1>
-<p class="intro">İlk projen için üç buluşma. Aşağıdaki kayıtlar eğitim amacıyla hazırlanmış örnek verilerdir.</p>
-<section class="grid" aria-label="Örnek etkinlikler">
-<article><p class="meta">12 KASIM / 14.00</p><h2>HTML Atölyesi</h2><p>Başlık, paragraf ve linklerle ilk sayfanı oluştur.</p><p>Yer: Bilgisayar Laboratuvarı</p></article>
-<article><p class="meta">19 KASIM / 14.00</p><h2>CSS Tasarım Saati</h2><p>Renkleri, boşlukları ve sayfa düzenini keşfet.</p><p>Yer: Bilgisayar Laboratuvarı</p></article>
-<article><p class="meta">26 KASIM / 14.00</p><h2>Copilot ile Kod Okuma</h2><p>Kodunu açıklat, küçük bir değişiklik yap ve sonucu dene.</p><p>Yer: Çevrim içi buluşma</p></article>
-</section><p class="note">Bu sayfa statiktir. Etkinlik eklemek için HTML dosyasını düzenleriz.</p></main>
-<footer>BPR201 - İnternet Tabanlı Programlama / Eğitim amaçlı örnek proje</footer>
+<header class="site-header">
+  <a class="brand" href="index.html"><span class="brand-mark">R</span><span>renkli<span class="brand-light"> atölye</span></span></a>
+  <nav aria-label="Ana menü">
+    <a href="index.html">Ana Sayfa</a>
+    <a href="etkinlikler.html" aria-current="page">Koleksiyon</a>
+    <a href="hakkimizda.html">Atölye</a>
+    <a href="taki-yapimi.html">Takı</a>
+    <a href="mum-yapimi.html">Mum</a>
+    <a href="orgu-el-isi.html">Örgü &amp; El İşi</a>
+  </nav>
+</header>
+<main class="page-main">
+  <section class="page-intro">
+    <p class="eyebrow"><span class="eyebrow-dot"></span>EL YAPIMI KOLEKSİYON</p>
+    <h1>Küçük mutluluklar,<br><span>tek tek elde.</span></h1>
+    <p class="intro">Aynısından çok olmayan, kendine has parçalar. Her ürün elde hazırlandığı için minik farklılıklar onun hikayesinin bir parçası.</p>
+    <form class="search-form catalog-search" action="etkinlikler.html" method="get">
+      <label class="visually-hidden" for="catalog-search">Koleksiyonda ürün ara</label>
+      <input id="catalog-search" type="search" name="q" placeholder="Koleksiyonda ara: takı, mum, çanta...">
+      <button type="submit">Ara <span aria-hidden="true">↗</span></button>
+    </form>
+    <p class="search-status" id="search-status" role="status" aria-live="polite"></p>
+  </section>
+  <section class="catalog-grid" aria-label="El yapımı ürün koleksiyonu">
+    <article class="catalog-item">
+      <div class="catalog-image catalog-image-coral"><img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Renkli taş detaylı el yapımı kolye ve küpeler"><span class="category-tag">TAKI</span></div>
+      <div class="catalog-details"><div><h2>Renk Oyunu</h2><p>Boncuk ve doğal taşlarla elde tasarlandı.</p></div><span class="catalog-number">01</span></div>
+    </article>
+    <article class="catalog-item">
+      <div class="catalog-image catalog-image-yellow"><img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="El yapımı, sıcak tonlarda dekoratif mum"><span class="category-tag">MUM</span></div>
+      <div class="catalog-details"><div><h2>Gün Batımı</h2><p>Dinlendirici kokularla küçük bir akşam molası.</p></div><span class="catalog-number">02</span></div>
+    </article>
+    <article class="catalog-item">
+      <div class="catalog-image catalog-image-mint"><img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Günlük kullanım için dokulu el yapımı çanta"><span class="category-tag">ÖRGÜ ÇANTA</span></div>
+      <div class="catalog-details"><div><h2>Hafta Sonu</h2><p>Renkli iplerle elde örülen kullanışlı çanta.</p></div><span class="catalog-number">03</span></div>
+    </article>
+    <article class="catalog-item">
+      <div class="catalog-image catalog-image-blue"><img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="İnce işçilikli el yapımı yüzük ve takı detayları"><span class="category-tag">TAKI</span></div>
+      <div class="catalog-details"><div><h2>Minik Işıltılar</h2><p>Her gün takabileceğin sade, neşeli parçalar.</p></div><span class="catalog-number">04</span></div>
+    </article>
+    <article class="catalog-item">
+      <div class="catalog-image catalog-image-pink"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Evde sıcak ve renkli bir atmosfer oluşturan el işi dekorlar"><span class="category-tag">EV İŞİ</span></div>
+      <div class="catalog-details"><div><h2>Renkli Köşe</h2><p>Yaşam alanına el emeğiyle sıcaklık kat.</p></div><span class="catalog-number">05</span></div>
+    </article>
+    <article class="catalog-item">
+      <div class="catalog-image catalog-image-lilac"><img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="El işçiliğiyle hazırlanmış özgün dekoratif obje"><span class="category-tag">EL İŞİ</span></div>
+      <div class="catalog-details"><div><h2>Biricik Parçalar</h2><p>Atölyede artan malzemelerden yeni fikirler.</p></div><span class="catalog-number">06</span></div>
+    </article>
+    <article class="catalog-item">
+      <div class="catalog-image catalog-image-yellow"><img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Gün ışığında renkli boncuklarla hazırlanmış el yapımı takı"><span class="category-tag">TAKI</span></div>
+      <div class="catalog-details"><div><h2>Boncuk Bahçesi</h2><p>Renkli boncuklarla elde dizilmiş bileklikler.</p></div><span class="catalog-number">07</span></div>
+    </article>
+    <article class="catalog-item">
+      <div class="catalog-image catalog-image-pink"><img src="https://images.unsplash.com/photo-1602874801007-bd458bb1b8b6?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Aydınlık bir odada yanan el yapımı kokulu mum"><span class="category-tag">MUM</span></div>
+      <div class="catalog-details"><div><h2>Sabah Bahçesi</h2><p>Çiçeksi kokusuyla güne eşlik eden el yapımı mum.</p></div><span class="catalog-number">08</span></div>
+    </article>
+    <article class="catalog-item">
+      <div class="catalog-image catalog-image-mint"><img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Açık renkli, günlük kullanıma uygun el yapımı çanta"><span class="category-tag">ÖRGÜ ÇANTA</span></div>
+      <div class="catalog-details"><div><h2>Renkli Pazar</h2><p>Günlük eşyaların için hafif ve neşeli bir çanta.</p></div><span class="catalog-number">09</span></div>
+    </article>
+  </section>
+  <p class="catalog-note">Ürün görselleri örnek amaçlıdır. Her parça el yapımı olduğu için renk ve doku farklılık gösterebilir.</p>
+</main>
+<footer><a class="footer-brand" href="index.html">renkli atölye</a><span>Güzel şeyler elde başlar.</span><span>El emeğiyle, sevgiyle.</span></footer>
+<script src="search.js" defer></script>
 </body>
 </html>
